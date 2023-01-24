@@ -44,3 +44,10 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 21ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 6415)
 
 
+Started GET "/" for ::1 at 2023-01-24 06:47:58 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb
+  Rendered home/index.html.erb (Duration: 4.5ms | Allocations: 604)
+Completed 200 OK in 52ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 7937)
+
+
