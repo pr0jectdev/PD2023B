@@ -1,5 +1,13 @@
 **Project Developer 2023B (Ruby)**
 
+<em>26/01/23</em> awaken
+- Configurações de layout
+- 
+<em>25/01/23</em> awaken
+- Instalado Tailwind CSS
+- Configurações de layout
+- Alterado Procfile.dev
+
 <em>23/01/23</em> awaken
 - Criado home_controller.
 - Configurado rotas: root
