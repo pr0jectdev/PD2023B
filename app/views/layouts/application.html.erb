@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pd2023b</title>
+    <title><%= content_for?(:html_title) ? yield(:html_title) : "Default" %></title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+
+<div class="min-h-screen flex flex-col justify-center">
+  <header class="bg-slate-300 p-2">Header</header>
+
+  <div class="flex-1 flex flex-col sm:flex-row">
+    <main class="flex-1 bg-slate-50 pl-6 pr-6 pt-2 pb-6"><%= yield %></main>
+
+    <nav class="order-first sm:w-40 bg-blue-50 p-2 border-2 border-r-slate-300">
+      <li><%= link_to_unless_current "Home", {:controller => "home", :action => "index"} %></li>
+      <li><%= link_to_unless_current "Okey", {:controller => "okey", :action => "index"} %></li>
+      <li><%= link_to_unless_current "aux", {:controller => "okey", :action => "auxiliar"} %></li>
+    </nav>
+    
+  </div>
+
+  <footer class="bg-slate-200 p-2">
+    fuuter
+  </footer>
+</div>
+
+
   </body>
 </html>
+
+
+<% if false %>
+<main class="container mx-auto mt-28 px-5 flex">
+<aside class="sm:w-32 bg-yellow-100 p-2">Right Sidebar</aside>
+<% end %>
+
+<%# commented line %>
